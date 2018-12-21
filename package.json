@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dart-accounts": "java -jar ./openapi-generator-cli.jar generate -i https://raw.githubusercontent.com/aroraenterprise/ed_services/dart-fix/accounts.yaml?1 -g dart -D pubName=edropin_accountsapi -D browserClient=false -D supportDart2=true -o ./clients/accounts",
-    "dart-events": "java -jar ./openapi-generator-cli.jar generate -i https://raw.githubusercontent.com/aroraenterprise/ed_services/dart-fix/events.yaml?1 -g dart -D pubName=edropin_eventsapi -D browserClient=false -D supportDart2=true -o ./clients/events"
+    "generate-dart": "java -jar ./openapi-generator-cli.jar generate -i https://raw.githubusercontent.com/aroraenterprise/ed_services/dart-fix/events.yaml?1 -g dart -D pubName=edropin_eventsapi -D browserClient=false -D supportDart2=true -o ./"
   },
   "author": "Saj Arora <dev@edropin.com> (http://edropin.com)",
   "license": "UNLICENSED"
