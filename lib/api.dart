@@ -48,6 +48,7 @@ part 'model/ee_event_certificate_update.dart';
 part 'model/ee_event_dropin.dart';
 part 'model/ee_event_dropin_ticket.dart';
 part 'model/ee_event_dropin_update.dart';
+part 'model/ee_event_profile.dart';
 part 'model/ee_event_tag.dart';
 part 'model/ee_event_tag_upsert.dart';
 part 'model/ee_event_update.dart';

@@ -89,6 +89,8 @@ class ApiClient {
           return EeEventDropinTicket.fromJson(value);
         case 'EeEventDropinUpdate':
           return EeEventDropinUpdate.fromJson(value);
+        case 'EeEventProfile':
+          return EeEventProfile.fromJson(value);
         case 'EeEventTag':
           return EeEventTag.fromJson(value);
         case 'EeEventTagUpsert':

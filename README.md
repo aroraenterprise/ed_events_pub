@@ -178,6 +178,7 @@ Class | Method | HTTP request | Description
  - [EeEventDropin](docs//EeEventDropin.md)
  - [EeEventDropinTicket](docs//EeEventDropinTicket.md)
  - [EeEventDropinUpdate](docs//EeEventDropinUpdate.md)
+ - [EeEventProfile](docs//EeEventProfile.md)
  - [EeEventTag](docs//EeEventTag.md)
  - [EeEventTagUpsert](docs//EeEventTagUpsert.md)
  - [EeEventUpdate](docs//EeEventUpdate.md)

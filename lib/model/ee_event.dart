@@ -55,9 +55,7 @@ class EeEvent {
   
   String organizerName = null;
   
-  List<String> profiles = [];
-  
-  List<String> courseIds = [];
+  List<EeEventProfile> profiles = [];
   
   List<String> availableCurrencyCode = [];
   
@@ -76,7 +74,7 @@ class EeEvent {
 
   @override
   String toString() {
-    return 'EeEvent[id=$id, createdOn=$createdOn, modifiedOn=$modifiedOn, version=$version, organizerId=$organizerId, name=$name, startTimestamp=$startTimestamp, endTimestamp=$endTimestamp, timezone=$timezone, bio=$bio, picture=$picture, pictures=$pictures, website=$website, isOnline=$isOnline, isHandsOn=$isHandsOn, isDestination=$isDestination, destinationType=$destinationType, isFree=$isFree, isLive=$isLive, isPublic=$isPublic, duration=$duration, categories=$categories, address=$address, policy=$policy, agreeTerms=$agreeTerms, organizerName=$organizerName, profiles=$profiles, courseIds=$courseIds, availableCurrencyCode=$availableCurrencyCode, totalProfiles=$totalProfiles, totalTickets=$totalTickets, totalTicketInventory=$totalTicketInventory, totalTicketSold=$totalTicketSold, primaryTicket=$primaryTicket, tickets=$tickets, ]';
+    return 'EeEvent[id=$id, createdOn=$createdOn, modifiedOn=$modifiedOn, version=$version, organizerId=$organizerId, name=$name, startTimestamp=$startTimestamp, endTimestamp=$endTimestamp, timezone=$timezone, bio=$bio, picture=$picture, pictures=$pictures, website=$website, isOnline=$isOnline, isHandsOn=$isHandsOn, isDestination=$isDestination, destinationType=$destinationType, isFree=$isFree, isLive=$isLive, isPublic=$isPublic, duration=$duration, categories=$categories, address=$address, policy=$policy, agreeTerms=$agreeTerms, organizerName=$organizerName, profiles=$profiles, availableCurrencyCode=$availableCurrencyCode, totalProfiles=$totalProfiles, totalTickets=$totalTickets, totalTicketInventory=$totalTicketInventory, totalTicketSold=$totalTicketSold, primaryTicket=$primaryTicket, tickets=$tickets, ]';
   }
 
   EeEvent.fromJson(Map<String, dynamic> json) {
@@ -107,8 +105,7 @@ class EeEvent {
     policy = json['policy'];
     agreeTerms = json['agreeTerms'];
     organizerName = json['organizerName'];
-    profiles = ((json['profiles'] ?? []) as List).map((item) => item as String).toList();
-    courseIds = ((json['courseIds'] ?? []) as List).map((item) => item as String).toList();
+    profiles = EeEventProfile.listFromJson(json['profiles']);
     availableCurrencyCode = ((json['availableCurrencyCode'] ?? []) as List).map((item) => item as String).toList();
     totalProfiles = json['totalProfiles'];
     totalTickets = json['totalTickets'];
@@ -147,7 +144,6 @@ class EeEvent {
       'agreeTerms': agreeTerms,
       'organizerName': organizerName,
       'profiles': profiles,
-      'courseIds': courseIds,
       'availableCurrencyCode': availableCurrencyCode,
       'totalProfiles': totalProfiles,
       'totalTickets': totalTickets,
